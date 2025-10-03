@@ -1,0 +1,74 @@
+# Configuración del sitio para GitHub Pages
+title: "PoliAcreditaIA - Documentación"
+description: "Sistema integral para la gestión de acreditación universitaria"
+baseurl: "" # El subdirectorio de tu sitio, ej. /blog
+url: "https://joseteran25.github.io" # La URL base de tu sitio
+
+# Configuración del tema
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Configuración de navegación
+header_pages:
+  - index.md
+  - "Sprint 6.1/index.md"
+
+# Configuración de Markdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Configuraciones adicionales
+show_excerpts: true
+date_format: "%B %d, %Y"
+
+# Información del autor
+author:
+  name: "Equipo PoliAcreditaIA"
+  email: "contacto@poliacredita.edu"
+
+# Configuración de GitHub
+repository: "JoseTeran25/PoliAcreditaIA"
+
+# Excluir archivos del sitio generado
+exclude:
+  - "*.puml"
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Incluir archivos específicos
+include:
+  - _pages
+
+# Configuración de colecciones (si necesitas más adelante)
+collections:
+  sprints:
+    output: true
+    permalink: /:collection/:name/
+
+# Configuración del sitemap
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Equipo PoliAcreditaIA"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# SEO y metadata
+lang: es
+timezone: America/Bogota
